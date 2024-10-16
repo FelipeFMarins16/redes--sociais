@@ -8,5 +8,7 @@ async function visualizarInformacoesGlobais(params){
   paragrafo.classlist.add('graficos-container__texto')
   paragrafo.innerHTML='voce sabia que o mundo tem ${dados.total_pessoas_mundo}de pessoas e que aproximadamente ${total_pessoas_conectadas} estão conectadas em alguma rede social e passam em média ${dados.tempo_medio} horas conctadas.'
   console.log(paragrafo)
+  const container=document.getElementyById('graficos-container')
+  container.appendChild(paragrafo)
 }
 function visualizarInformacoesGlobais()
