@@ -7,10 +7,13 @@ async function visualizarInformacoesGlobais(params){
   const pessoasNoMundo = (dados.total_pessoas_mundo / 1e9)
   const horas = parseInt(dados.tempo_medio)
   const minutos = Math.round((dados. tempo-medio - horas) * 100)
+  const porcentagemConectada = ((pessoasConectadas/ pessoasNoMundo ) *100). topFixed(2)
   const paragrafo= document.createElement('p')
   paragrafo.classlist.add('graficos-container__texto')
-  paragrafo.innerHTML='voce sabia que o mundo tem <span> ${dados.total_pessoas_mundo}</span>de pessoas e que aproximadamente <span>${pessoasConectadas}bilhões</span> estão conectadas em alguma rede social e passam em média <span>${horas}horas </span> e <span>${minutos}minutos </span>conctadas.
-  c onst container=document.getElementyById('graficos-container')
+  paragrafo.innerHTML='voce sabia que o mundo tem <span> ${dados.total_pessoas_mundo}</span>de pessoas e que aproximadamente
+    <span>${pessoasConectadas}bilhões</span> estão conectadas em alguma rede social e passam em média <span>${horas}horas </span> e 
+    <span>${minutos}minutos </span>conctadas.<br> Isso significa que aproximadamente ${porcentagemConectada}% de pessoas estão conectadas em alguma rede social.
+  const container=document.getElementyById('graficos-container')
   container.appendChild(paragrafo)
 }
 function visualizarInformacoesGlobais()
