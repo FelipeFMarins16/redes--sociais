@@ -29,10 +29,25 @@ const layout = {
     }
 }
 xaxis:{
+  tickfont:{
+    color:getCSS('--primary-color')
+    size:16
+  }
   title:{
-    text:'nome das redes sociasi',
+    text:'nome das redes sociais',
       font:<
+    {
       color:getCSS('--secondary-color')
+  }
+}
+}
+    yaxis:{
+      title:'bilhóes de usuários ativos',
+        font:{
+        color: getCSS('--secondary-color')
+      }
+    }
+    }
   }
 const grafico = document.createElement('div')
 grafico.className = 'grafico'
