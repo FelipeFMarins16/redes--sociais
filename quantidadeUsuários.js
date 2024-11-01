@@ -25,10 +25,15 @@ const layout = {
       font:{
       color: getCSS('--primary-color')
       family: getCSS('--font'),
-       size:30    
+       size:30   
     }
 }
-
+xaxis:{
+  title:{
+    text:'nome das redes sociasi',
+      font:<
+      color:getCSS('--secondary-color')
+  }
 const grafico = document.createElement('div')
 grafico.className = 'grafico'
 document.getElementById('graficos-container').appendChild(grafico)
