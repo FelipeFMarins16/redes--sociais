@@ -43,6 +43,7 @@ xaxis:{
 }
 }
     yaxis:{
+      tickfont: tickconfig,
       title:'bilhóes de usuários ativos',
         font:{
         color: getCSS('--secondary-color')
